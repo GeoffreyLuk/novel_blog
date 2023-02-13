@@ -1,0 +1,25 @@
+{
+  "name": "novel_blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Geoffrey Luk <luk.geoffreycw@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "dotenv": "^16.0.3",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@types/async": "^3.2.16",
+    "@types/express": "^4.17.17",
+    "@types/pg": "^8.6.6",
+    "async": "^3.2.4",
+    "express": "^4.18.2",
+    "fecha": "^4.2.3",
+    "knex": "^2.4.2",
+    "node-fetch": "^3.3.0",
+    "pg": "^8.9.0"
+  }
+}
