@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./assets/login/login.css" rel="stylesheet">
+</head>
+<body>
+    <form id="login_form" name="login_form">
+        <fieldset>
+            <legend>Login</legend>
+            <label for="login_email">email</label><input type="email" name="email" id="login_email" placeholder="placeholder@gmail.com"><br>
+            <label for="login_password">password</label><input type="password" name="password" id="login_password" placeholder="password"><br>
+            <input type="submit">
+        </fieldset>
+    </form>
+    <br><br>
+    <form id="signup_form" name="signup_form">
+        <fieldset>
+            <legend>Sign up</legend>
+            <label for="signup_first_name">first name</label><input type="text" name="first_name" id="signup_first_name" placeholder="Timothy"><br>
+            <label for="signup_last_name">last name</label><input type="text" name="last_name" id="signup_last_name" placeholder="Chan"><br>
+            <label for="signup_date_of_birth">Date of Birth</label><input type="date" name="date_of_birth" id="signup_date_of_birth"><br>
+            <label for="signup_email">email</label><input type="email" name="email" id="signup_email" placeholder="placeholder@gmail.com"><br>
+            <label for="signup_password">password</label><input type="password" name="password" id="signup_password" placeholder="password"><br>
+            <label for="signup_icon">Profile Picture</label><input type="file" name="icon" id="signup_icon"  accept="image/*"><br>
+            <input type="reset" value="clear"><input type="submit" value="submit">
+        </fieldset>
+    </form>
+
+<script src="./assets/login/login.js"></script>
+</body>
+</html>
