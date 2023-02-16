@@ -9,14 +9,14 @@ export async function up(knex: Knex): Promise<void> {
     })
     await knex.schema.createTable("users",(table)=>{
         table.increments();
-        table.integer("permission_id").unsigned();
+        table.integer("permission_id").unsigned().defaultTo(3).notNullable();
         table.foreign("permission_id").references("permissions.id");
-        table.string("first_name");
-        table.string("last_name");
+        table.string("first_name").notNullable();
+        table.string("last_name").notNullable();
         table.date("date_of_birth");
-        table.string("email");
-        table.string("password");
-        table.string("icon").defaultTo("default_icon.jpg")
+        table.string("email").notNullable();
+        table.string("password").notNullable();
+        table.string("icon").defaultTo("default_icon.jpg").notNullable();
         table.timestamps(false,true)
     })
 }

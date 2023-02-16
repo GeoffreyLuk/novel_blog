@@ -1,7 +1,9 @@
 import express from "express";
 import path from "path"
 import { sessionMiddleware, User } from "./util/middleware";
+import { loginRoutes } from "./loginRoutes";
 import { userRoutes } from "./userRoutes";
+
 
 //initialise modules
 const app = express();
@@ -14,10 +16,14 @@ declare module 'express-session' {
 
 //load essential middlewares
 app.use(express.json())
+app.use(express.urlencoded({ extended: true }));
 app.use(sessionMiddleware) // for express-session
 
 //RESTFUL API Route refactorisation
+
+app.use(loginRoutes)
 app.use(userRoutes)
+
 
 
 // allow access to directories
