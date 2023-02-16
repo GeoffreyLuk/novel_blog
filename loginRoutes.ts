@@ -43,17 +43,17 @@ loginRoutes.get("/test", (req, res) => {
     res.redirect("/?message=test+successful")
 })
 
-loginRoutes.get("/changeInfo",(req,res)=>{
+loginRoutes.get("/changeInfo",isLoggedIn, (req,res)=>{
     res.sendFile(path.join(__dirname,'public','changeInfo.html'))
 })
 
-loginRoutes.get("/userInfo", isLoggedIn ,async (req,res)=>{
+loginRoutes.get("/userInfo", async (req,res)=>{
     let user = req.session.user!.id
     let knexData = (await knex
         .select("*")
         .from("users")
         .where("id", "=", user))[0]
-    delete knexData.password
+    // delete knexData.password
     res.status(200).json(knexData)
 })
 

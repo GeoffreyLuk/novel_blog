@@ -7,7 +7,7 @@ const imgPreview = document.querySelector("#image_preview")
 
 
 window.onload = async () =>{
-    // getUserDetails()
+    getUserDetails()
 }
 
 async function getUserDetails(){

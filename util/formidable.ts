@@ -12,7 +12,7 @@ export function formidableUserDetails(req: express.Request){
         filename: (orgName,orgExt,part,form)=>{
             let timestamp = format(new Date(), "YYYYMMDDHHmmss")
             let ext = part.mimetype?.split('/').pop()
-            return `user-${timestamp}.${ext}`
+            return `new-user-${timestamp}.${ext}`
         }
     
     })
